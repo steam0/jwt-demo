@@ -24,7 +24,7 @@ public class WebRestController {
         this.applicationUserRepository = applicationUserRepository;
     }
 
-    @GetMapping("/userinfo")
+    @GetMapping("/authorize")
     public ApplicationUser getUserInfo() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         log.info("Returning userinfo for user: {} ", authentication.getPrincipal().toString());
